@@ -1078,7 +1078,7 @@ X-Secret-Key: [a-zA-Z0-9]{8}
 | from              | Optional, DateTime String | Up to the latest 30 days, or 7 days for default (ISO 8601, e.g. YYYY-MM-DDThh:mm:ss.SSSTZD) |
 | to                | Optional, DateTime String | Up to the latest 30 days, or 7 days for default (ISO 8601, e.g. YYYY-MM-DDThh:mm:ss.SSSTZD) |
 | limit             | Optional, Number          | Size to list at once: default and maximum value is 100     |
-| pageNumber        | Optional, Number          | 페이지 번호, 기본값 1 |
+| pageNumber        | Optional, Number          | Page number, default is 1 |
 ##### Description
 - messageErrorType and messageErrorCause mean the followings:
     - CLIENT_ERROR: Client’s wrong request
