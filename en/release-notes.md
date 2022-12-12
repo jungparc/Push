@@ -1,12 +1,12 @@
 ## Notification> Push > Release Notes
 
-### 2022. 12. 13.
+### December 13, 2022
 #### [API]
-##### 기능 추가
-* 일반 로그 조회 시 페이징 기능 추가
-  * Field에 pageNumber가 추가되었습니다.
-##### 기능 개선
-* 실패한 메시지 목록 조회 시 limit 최댓값을 1000에서 100으로 변경
+##### Added Features
+* Added a paging feature when viewing general logs
+  * Added pageNumber to the field list.
+##### Updates
+* Changed the maximum limit from 1000 to 100 when viewing failed messages
 
 ### May 10, 2022
 #### [API]

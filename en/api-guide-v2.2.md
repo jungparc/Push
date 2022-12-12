@@ -1076,7 +1076,7 @@ X-Secret-Access-Key: [a-zA-Z0-9]{16}
 | from              | Optional, DateTime String | Up to the latest 30 days, or before recent 7 days for default (ISO 8601, e.g. YYYY-MM-DDThh:mm:ss.SSSTZD) |
 | to                | Optional, DateTime String | Up to the latest 30 days, or now for default (ISO 8601, e.g. YYYY-MM-DDThh:mm:ss.SSSTZD) |
 | limit             | Optional, Number          | Size to list at once: 100 for default and max              |
-| pageNumber        | Optional, Number          | 페이지 번호, 기본값 1 |
+| pageNumber        | Optional, Number          | Page number, default is 1 |
 
 ##### Description
 
@@ -1248,7 +1248,7 @@ X-Secret-Access-Key: [a-zA-Z0-9]{16}
 | from      | Optional, DateTime String | Up to the latest 30 days (ISO 8601, e.g. YYYY-MM-DDThh:mm:ss.SSSTZD) |
 | to        | Optional, DateTime String | Up to the latest 30 days (ISO 8601, e.g. YYYY-MM-DDThh:mm:ss.SSSTZD) |
 | limit     | Optional, Number          | Number of maximum queries: default is 100                            |
-| pageNumber | Optional, Number | 페이지 번호, 기본값 1                                                       |
+| pageNumber | Optional, Number | Page number, default is 1                                                       |
 
 ##### Request Body
 
