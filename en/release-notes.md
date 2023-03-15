@@ -4,7 +4,7 @@
 #### [API]
 ##### Added Features
 * Added the Query Token List API
-    * Added API to query token lists (v2.4.)
+    * Added API to query token lists (v2.4)
 
 ### December 13, 2022
 #### [API]
