@@ -133,6 +133,66 @@ curl -X POST \
 - Even if a token is expired due to app deletion, it is not immediately applied to GCM or APNS server, so push message delivery can be successful after app is deleted. 
 
 ### Query
+
+#### Query Token List
+##### Method, URL
+
+```
+GET /push/v2.4/appkeys/{appkey}/tokens-by-cursor?cursorUid={cursorUid}&cursorToken={cursorToken}&limit={limit}
+Content-Type: application/json;charset=UTF-8
+```
+
+| Field | Usage | Description |
+| - | - | - |
+| appkey | Required, String | Path Variable, appkey issued on product use |
+| cursorUid | Optional, String | Cursor for user's UID. Required to move between pages |
+| cursorToken | Optional, String | Cursor for user's token. Required to move between pages |
+| limit | Optional, Number | List size to query at once, Default and max are 1,000 |
+
+##### Request Body
+```
+None
+```
+
+##### cURL
+```
+curl -X GET \
+'https://api-push.cloud.toast.com/push/v2.4/appkeys/'"${APP_KEY}"'/tokens-by-cursor' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'X-Secret-Key: '"${SECRET_KEY}"''
+```
+
+##### Response Body
+
+```
+{
+    "tokens" : [{
+        "pushType" : "FCM",
+        "isNotificationAgreement" : true,
+        "isAdAgreement" : true,
+        "isNightAdAgreement" : true,
+        "timezoneId" : "Asia/Seoul",
+        "country" : "KR",
+        "language" : "ko",
+        "uid" : "User ID",
+        "token" : "Token",
+        "updatedDateTime" : "2017-08-12T01:04:18.000+09:00",
+        "adAgreementDateTime" : "2017-08-12T01:04:19.000+09:00",
+        "nightAdAgreementDateTime" : "2017-08-12T01:04:19.000+09:00",
+        "deviceId" : "X3LOdJSQdNzCCvcbiSPZTGK1M9srPU5EumRD",
+        "activatedDateTime" : "2017-08-12T01:04:19.000+09:00"
+    }],
+    "header" : {
+        "isSuccessful" : true,
+        "resultCode" : 0,
+        "resultMessage" : "success"
+    }
+}
+```
+
+##### Description
+- When moving between pages, both "cursorUid" and "cursorToken" are required. The query begins after the set "cursorUid" and "cursorToken".
+
 #### Query Tokens by Token
 - Can be queried from client. 
 ##### Method, URL
