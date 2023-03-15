@@ -188,7 +188,7 @@ curl -X GET \
 ```
 
 ##### Description
-- 페이지 이동 시 "cursorUid", "cursorToken" 모두 필수입니다. 설정한 "cursorUid", "cursorToken' 다음 순서부터 조회합니다.
+- 페이지 이동 시 "cursorUid", "cursorToken" 모두 필수입니다. 설정한 "cursorUid", "cursorToken" 다음 순서부터 조회합니다.
 
 
 

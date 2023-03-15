@@ -118,7 +118,6 @@ curl -X POST \
 }
 ```
 
-
 ##### Description
 
 - If token is registered again when it is already registered, existing information is updated. 
