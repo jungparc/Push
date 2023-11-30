@@ -1,5 +1,12 @@
 ## Notification> Push > Release Notes
 
+### October 31, 2023
+#### [Console]
+##### Feature Updates
+* Added SecretKey in Log Message Delivery History
+    * From October 31, 2023, the SecretKey input of the Log&Crash Search service is additionally required when activating the Log Message Delivery History feature.
+    * If you have been using the feature since October 31, 2023, you will not need to enter the SecretKey as it will be switched over.
+
 ### March 14, 2023
 #### [API]
 ##### Added Features

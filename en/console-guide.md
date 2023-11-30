@@ -468,11 +468,12 @@ Some apps are deleted but not directly lead into token expiration. If token is d
 3. When it is disconnected to the internet for a long time 
 If it is not connected to the internet, due to various reasons, including phone being turned off, in the energy-saving mode, or in network grey area, both message receiving and event collecting are unavailable.  
 4. When it fails to collect receiving events 
-Even if a message has been received, it may not be properly collected depending on the OS or network environment when the receiving event is sent to server.  
+Even if a message has been received, it may not be properly collected depending on the OS or network environment when the receiving event is sent to server. 
 
 ### Log Message Delivery History
 - Send message delivery history to Log & Crash Search as specified.
 - **Appkey**: Enter Appkey from Log & Crash Search service.
+- **Secretkey**: Enter SecretKey from Log & Crash Search service.
 - **Log Source**: Enter a value to log along with history logging, as a separator from other logs.
 - **Log Level**: Record specific parts only from the delivery history:
     - **ALL**: Log all history, including success/failure of delivery.
