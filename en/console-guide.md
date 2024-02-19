@@ -11,43 +11,25 @@ Currently, the supported push notification service certificates are as follows:
 
 To manage certificates, go to **Notification > Push > Certificates** from the menu.
 
-### FCM Server Key
 
-To send push notification to Android devices, you need an API Key of a valid FCM project.
+<span id="get-fcm-service-account-credential"></span>
 
-#### Create and Import Firebase Cloud Messaging(FCM) API Key
+### FCM Service Account Credential
+To send push notification messages to an Android device, you need **Service Account Credential**.
+A **Service Account** is a special type of account that is typically used for application-to-application (A2A) communication with Google Cloud.
 
+#### Import the FCM Service Account Credential JSON File
 1. Sign in to [Google Firebase Console](https://console.firebase.google.com/).
-2. Choose **Add Project**.
-3. Complete the form and click **Create Project**.
-4. Click on the Gear icon on the first page of the project.
-5. Click **Project Settings**.
-6. Choose **Cloud Messaging** tab on the **Settings** page.
-7. Check your **Server Key** (API Key) and **Sender ID**.
+2. Add a project to create a new project.
+3. Go to the created project.
+4. Click **Gear > Project settings** next to Project overview in the top left of the page.
+5. Select **Service Account**.
+6. In the Firbase Admin SDK topic, click **Generate new private key** to download a new **Service Account Credential** JSON file.
 
-#### Register FCM API Key
-
-1. Go to **Console > Notification > Push** and click the **Certificates** tab.
-2. Copy the FCM API Key just created and paste it to the  **GCM API Key**, and press **Register** to complete.
-
-#### Caution for Google Project
-- Google is scheduled to [deprecate GCM service](https://developers.google.com/cloud-messaging/faq) as of April 11, 2019.
-- If the key created from Google Project (now, Google Cloud Platform) is currently used as GCM API Key, it may not be valid in the future.
-  In such a case, the Google Project must be migrated to Firebase and a new key must be created through Firebase.
-
-For details on how to migrate from GCM to FCM, see [Firebase Migration Guide](https://developers.google.com/cloud-messaging/android/android-migrate-fcm).
-
-##### Migrating from Google Project to Firebase
-
-1. Go to [Google Firebase Console](https://console.firebase.google.com/).
-2. Choose **CREATE NEW PROJECT**.
-3. When there is a Google Project in service, the Project Name shows it on the list; choose the Google Project to migrate.
-4. The new Firebase Project ID will be identical with the existing Google Project.  
-5. Click on the Gear icon on the first page of the project.
-6. Click **Project Settings**.
-7. Click the **CLOUD MESSAGING** tab on the page.
-8. Check your Server Key (API Key) and Sender ID.
-9. Copy the Server Key at Firebase to **GCM API Key** in the **Certificates** tab.
+#### Register FCM Service Account Credential JSON File
+1. Go to **Notification > Push > Certificate** from the console.
+2. Open and copy the downloaded JSON file.
+3. Paste the copied content into the **FCM Service Account Credential** field and click **Register**.
 
 <span id="get-apns-jwt"></span>
 
