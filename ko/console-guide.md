@@ -29,7 +29,7 @@ Push 서비스를 활용하려면 먼저 타사 푸시 알림 서비스 인증�
 #### FCM Service Account Credential JSON 파일 등록
 1. 콘솔에서 **Notification > Push > 인증서**를 클릭합니다.
 2. 다운로드 받은 JSON 파일을 열어 내용을 복사합니다.
-2. 복사한 내용을 **FCM Service Account Credential** 항목에 붙여 넣고 **등록**을 클릭합니다.
+3. 복사한 내용을 **FCM Service Account Credential** 항목에 붙여 넣고 **등록**을 클릭합니다.
 
 <span id="get-apns-jwt"></span>
 
