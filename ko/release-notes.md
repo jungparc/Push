@@ -1,5 +1,14 @@
 ## Notification > Push > 릴리스 노트
 
+### 2024. 02. 27.
+#### [Console]
+##### 기능 추가
+* FCM Service Account Credenital 인증 추가
+    * 2024년 6월 20일부로 FCM Legacy API가 서비스 종료 예정입니다. 이에 따라, FCM 메시지 발송 시 FCM HTTP(V1) API를 이용해야 하며 API 인증에는 **Server Key** 대신 **Service Account Credential**가 필요합니다.
+        * <a href="https://firebase.google.com/docs/cloud-messaging/migrate-v1" target="_blank">FCM 마이그레이션 가이드 바로 가기</a>
+        * <a href="https://docs.nhncloud.com/ko/Notification/Push/ko/console-guide/#_1">콘솔 사용 가이드 바로 가기</a>
+    * **Service Account Credential**을 등록하면 FCM HTTP V1 API를 통해 FCM 메시지가 발송됩니다. 2024년 6월 20일 이후에도 계속 FCM으로 발송을 위해서는 반드시 콘솔에서 **Service Account Credential**을 등록해야 합니다.
+
 ### 2023. 10. 31.
 #### [Console]
 ##### 기능 변경

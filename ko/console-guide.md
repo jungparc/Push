@@ -1,4 +1,4 @@
-## Notification > Push > Console Guide
+## Notification > Push > 콘솔 사용 가이드
 
 Push 서비스를 활용하려면 먼저 타사 푸시 알림 서비스 인증서를 등록해야합니다.
 
@@ -11,43 +11,25 @@ Push 서비스를 활용하려면 먼저 타사 푸시 알림 서비스 인증�
 
 인증서 관리를 하기 위하여 콘솔에서 **Notification > Push > 인증서**를 클릭합니다.
 
-### FCM Server Key
 
-안드로이드 기기에 푸시 알림 메시지를 전송하기 위해서는 유효한 FCM 서비스의 Server Key가 필요합니다.
+<span id="get-fcm-service-account-credential"></span>
 
-#### Firebase 클라우드 메시징(FCM) Server Key 가져오기
+### FCM Service Account Credential
+안드로이드 기기에 푸시 알림 메시지를 전송하기 위해서는 **Service Account Credential**이 필요합니다.
+**Service Account**(서비스 계정)는 일반적으로 Google Cloud와  A2A(Application to Application) 통신 시 사용하는 특별한 유형의 계정입니다.
 
+#### FCM Service Account Credential JSON 파일 얻기
 1. [Google Firebase Console](https://console.firebase.google.com)에 접속합니다.
-2. **Add Project**를 클릭합니다.
-3. 프로젝트 이름과 정보를 입력하고 **Create Project**를 클릭합니다.
-4. 프로젝트 첫 페이지 왼쪽 위에서 톱니바퀴 아이콘을 클릭합니다.
-5. **Project settings**를 클릭합니다.
-6. **Settings** 페이지에서 **Cloud Messaging** 탭을 클릭합니다.
-7. **Server key**와 **Sender ID**를 확인합니다.
+2. 프로젝트 추가를 통해 새로운 프로젝트를 생성합니다.
+3. 생성된 프로젝트로 이동합니다.
+4. 페이지 왼쪽 상단 프로젝트 개요 옆 **톱니바퀴 > 프로젝트 설정**을 클릭합니다.
+5. **서비스 계정**을 선택합니다.
+6. Firbase Admin SDK 항목에서 **새 비공개 키 생성**을 클릭해 새로운 **Service Account Credential** JSON 파일을 다운로드합니다.
 
-#### FCM API Key 등록
-
-1. NHN Cloud 콘솔에서 **Notification > Push > 인증서**를 클릭합니다.
-2. 위에서 생성한 FCM Server Key를 복사해서 **FCM Server Key**에 붙여넣고 **등록** 버튼을 클릭합니다.
-
-#### Google Project 사용 시 주의 사항
-- Google은 2019년 4월 11일에 [GCM 서비스를 종료](https://developers.google.com/cloud-messaging/faq)할 예정입니다.
-- Google Project(현재 Google Cloud Platform)에서 생성한 키를 GCM API Key로 사용하고 있는 경우, 사용이 불가능할 수도 있습니다.    
-  만약 Google Project에서 생성한 키를 사용하지 못하게 되면, Google Project를 Firebase로 옮기고, Firebase에서 생성된 서버 키를 사용해야 합니다.
-
-GCM에서 FCM으로 옮기는 자세한 방법은 [Firebase Migration Guide](https://developers.google.com/cloud-messaging/android/android-migrate-fcm)를 참고하시기 바랍니다.
-
-##### Google Project에서 Firebase로 옮기기
-
-1. [Google Firebase Console](https://console.firebase.google.com/)에 접속합니다.
-2. **CREATE NEW PROJECT**를 클릭합니다.
-3. 사용하고 있는 Google Project가 있다면, Project Name 항목에 사용 중인 Google Project 목록이 표시됩니다. 옮기려는 Google Project를 선택합니다.
-4. 프로젝트 아이디가 기존 Google Project와 같게 설정됩니다.
-5. 프로젝트 첫 페이지에서 톱니바퀴(gear) 아이콘을 클릭합니다.
-6. **Project settings**를 클릭합니다.
-7. **Settings** 페이지에서 **CLOUD MESSAGING** 탭을 클릭합니다.
-8. Server key(API Key)와 Sender ID를 확인합니다.
-9. Firebase에서 확인한 Server key를 **인증서** 탭에 **FCM Server Key**에 붙여 넣습니다.
+#### FCM Service Account Credential JSON 파일 등록
+1. 콘솔에서 **Notification > Push > 인증서**를 클릭합니다.
+2. 다운로드 받은 JSON 파일을 열어 내용을 복사합니다.
+3. 복사한 내용을 **FCM Service Account Credential** 항목에 붙여 넣고 **등록**을 클릭합니다.
 
 <span id="get-apns-jwt"></span>
 

@@ -1,5 +1,21 @@
 ## Notification > Push > Release Notes
 
+### 2024. 02. 27.
+#### [Console]
+##### 機能追加
+* FCM Service Account Credenital認証追加
+    * 2024年6月20日付でFCM Legacy APIがサービス終了予定です。 これに伴い、FCMメッセージ送信時にFCM HTTP(V1) APIを利用する必要があり、API認証には**Server Key**の代わりに**Service Account Credential**が必要です。
+        * <a href="https://firebase.google.com/docs/cloud-messaging/migrate-v1" target="_blank">FCMマイグレーションガイド</a>
+        * <a href="https://docs.nhncloud.com/ko/Notification/Push/ko/console-guide/#_1">コンソール使用ガイド</a>
+    * **Service Account Credential**を登録すると、FCM HTTP V1 APIを通じてFCMメッセージが送信されます。2024年6月20日以降も引き続きFCMで送信するためには、必ずコンソールで**Service Account Credential**を登録する必要があります。
+
+### 2023. 10. 31.
+#### [Console]
+##### 機能変更
+* 送信履歴保存機能設定時にSecretKeyを追加
+    * 2023年10月31日から送信履歴保存機能を有効にする際、Log&Crash SearchサービスのSecretKey入力が追加で必要です。
+    * 2023年10月31日以前から機能を使用しているところは移行される予定ですので、SecretKeyの入力は必要ありません。
+
 ### 2023. 03. 14.
 #### [API]
 ##### 機能追加
