@@ -1460,7 +1460,7 @@ X-Secret-Access-Key: [a-zA-Z0-9]{16}
 
 | Field | Usage | Description |
 | - | - | - |
-| schedules | - | Date and time (ISO 8601, e.g. YYYY-MM-DDThh:mm) |
+| schedules | - | Date and time (ISO 8601, e.g. YYYY-MM-DDThh:mm), Maximum: 60 days from the current date (e.g. 31 July 2024 23:59 if the current date is 1 June 2024) |
 
 ##### Example
 ```

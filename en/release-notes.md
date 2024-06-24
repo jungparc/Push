@@ -1,5 +1,12 @@
 ## Notification> Push > Release Notes
 
+### June 25, 2024
+#### [Console, API]
+##### Feature Updates
+* Changed the maximum available period for scheduled delivery
+    * Changed the maximum available date for scheduled delivery to be up to 60 days from now 
+    * The change applies to the console and all versions of the APIs.
+
 ### February 27, 2024
 #### [Console]
 ##### Added Features
